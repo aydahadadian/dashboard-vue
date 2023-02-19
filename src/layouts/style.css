@@ -1,0 +1,57 @@
+
+#inspire > .v-application--wrap {
+  flex-direction: row;
+}
+.v-navigation-drawer {
+  left: 0px;
+  transform: translateX(0%);
+  position: fixed;
+  height: 100vh;
+  top: 24px;
+  bottom: 0px;
+  width: 256px;
+  margin: 1rem;
+  z-index: 10;
+}
+.v-app-bar {
+  background: transparent;
+  box-shadow: none;
+}
+.v-list-item__content {
+  flex-wrap: nowrap;
+  overflow: visible;
+  min-width: 95px;
+}
+.v-list-item__content > .v-avatar {
+  flex: none;
+  margin-right: 10px;
+}
+.v-list-item .v-list-item__title,
+.v-list-item .v-list-item__subtitle {
+  font-size: 0.9rem;
+}
+
+.v-list-item--link:before {
+  content: none;
+}
+.v-list-item {
+  margin: 10px 0;
+}
+.v-list-item:hover {
+  background-color: #4a4a4c !important;
+  border-radius: 10px;
+}
+.v-list-item__icon {
+  margin: 12px 0;
+  margin-right: 12px !important;
+}
+.v-icon.v-icon {
+  font-size: 1.3rem;
+}
+.v-list-group .v-list-group__header .v-list-item__icon.v-list-group__header__append-icon{
+  margin: 0;
+}
+.v-main__wrap{
+
+  padding: 25px;
+}
