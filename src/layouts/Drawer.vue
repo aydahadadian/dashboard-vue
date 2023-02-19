@@ -11,7 +11,7 @@
 
         <v-divider></v-divider>
 
-        <v-list :lines="false" density="compact" nav>
+        <v-list :lines="false" density="compact" nav class="sidebar-list">
           <v-list-group
             class="px-4 rounded-lg"
             v-for="item in profileItems"

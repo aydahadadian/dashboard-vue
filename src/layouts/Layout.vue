@@ -7,11 +7,7 @@
         
         <Appbar />
         <v-container class="py-8 px-6" fluid>
-          <v-row>
-            <v-col v-for="card in cards" :key="card" cols="12">
-              <v-card> </v-card>
-            </v-col>
-          </v-row>
+         <Dashboard />
         </v-container>
       </v-main>
     </v-layout>
@@ -20,6 +16,7 @@
 
 <script lang="jsx">
 
+import Dashboard from '../views/Dashboard.vue';
 import Appbar from './Appbar.vue';
 import Drawer from './Drawer.vue'
 
@@ -27,7 +24,7 @@ export default {
     data: () => ({
         
     }),
-    components: { Appbar,Drawer }
+    components: { Appbar, Drawer, Dashboard }
 }
 </script>
 

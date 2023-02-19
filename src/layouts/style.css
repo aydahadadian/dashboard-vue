@@ -37,7 +37,7 @@
 .v-list-item {
   margin: 10px 0;
 }
-.v-list-item:hover {
+.sidebar-list .v-list-item:hover {
   background-color: #4a4a4c !important;
   border-radius: 10px;
 }

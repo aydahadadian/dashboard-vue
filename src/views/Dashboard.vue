@@ -1,11 +1,14 @@
 <template>
   <div class="dashboard">
-    <h1 class="subheading grey--text">Dashboard</h1>
+   <SalesbyCountry />
   </div>
 </template>
 
 <script>
+import SalesbyCountry from '../components/SalesbyCountry/SalesbyCountry.vue';
+
 export default {
-  data() {},
+    data() { },
+    components: { SalesbyCountry }
 };
 </script>
