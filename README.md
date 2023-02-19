@@ -1,4 +1,4 @@
-# vue-dashboard
+# todo-vuetify
 
 ## Project setup
 
