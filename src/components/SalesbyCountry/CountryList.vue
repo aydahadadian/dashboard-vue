@@ -1,44 +1,58 @@
 <template>
-<v-card>
+  <v-card>
     <v-list>
-        <template v-for="(item, index) in items" >
-            <v-divider
-          v-if="item.divider"
-          :key="index"
-          inset
-        
-        ></v-divider>
-        <v-list-item v-else >
-            <v-list-item-content class="d-flex flex-column align-start">
-                <v-img
-                :width="width" :src="item.flag"></v-img>
+      <template v-for="(item, index) in items">
+        <v-divider v-if="item.divider" :key="index"></v-divider>
+        <v-list-item v-else>
+          <v-img
+            :src="item.flag"
+            class="me-6 theme--light"
+            style="max-width: 20px;"
+          ></v-img>
+
+          <v-list-item-content class="d-flex flex-column align-start">
+            <v-list-item-title
+              style="align-self:normal"
+              class="text-body-2 text-body font-weight-bold "
+              >country</v-list-item-title
+            >
+            <v-list-item-title
+              class="text-body-2  "
+              style="align-self:normal"
+              >{{ item.country }}</v-list-item-title
+            >
           </v-list-item-content>
 
-            <v-list-item-content class="d-flex flex-column align-start">
-            <v-list-item-title style="align-self:normal">country</v-list-item-title>
-            <v-list-item-subtitle>{{ item.country }}</v-list-item-subtitle>
+          <v-list-item-content class="d-flex flex-column">
+            <v-list-item-title class="text-body-2 text-body font-weight-bold "
+              >Sales</v-list-item-title
+            >
+            <v-list-item-title class="text-body-2  ">{{
+              item.Sales
+            }}</v-list-item-title>
           </v-list-item-content>
 
-            <v-list-item-content class="d-flex flex-column">
-            <v-list-item-title>Sales</v-list-item-title>
-            <v-list-item-subtitle>{{ item.Sales }}</v-list-item-subtitle>
+          <v-list-item-content class="d-flex flex-column">
+            <v-list-item-title class="text-body-2 text-body font-weight-bold "
+              >Value</v-list-item-title
+            >
+            <v-list-item-title class="text-body-2  "
+              >${{ item.Value }}</v-list-item-title
+            >
           </v-list-item-content>
-
-            <v-list-item-content class="d-flex flex-column">
-            <v-list-item-title>Value</v-list-item-title>
-            <v-list-item-subtitle>${{ item.Value }}</v-list-item-subtitle>
+          <v-list-item-content class="d-flex flex-column">
+            <v-list-item-title class="text-body-2 text-body font-weight-bold "
+              >Bounce</v-list-item-title
+            >
+            <v-list-item-title class="text-body-2  "
+              >{{ item.Bounce }}%</v-list-item-title
+            >
           </v-list-item-content>
-            <v-list-item-content class="d-flex flex-column">
-            <v-list-item-title>Bounce</v-list-item-title>
-            <v-list-item-subtitle>{{ item.Bounce }}%</v-list-item-subtitle>
-          </v-list-item-content>
-
         </v-list-item>
-        </template>
+      </template>
     </v-list>
-</v-card>
+  </v-card>
 </template>
-
 
 <script lang="jsx">
 import usaFlag from "../../assets/usa.png"
@@ -62,12 +76,13 @@ export default {
 
 ]
     })}
-    </script>
+</script>
 <style>
-.v-card{    box-shadow: none !important;}
+.v-card {
+  box-shadow: none !important;
+}
 
-.v-list-item:hover{
-    background-color: transparent !important;
-
+.v-list-item:hover {
+  background-color: transparent !important;
 }
 </style>

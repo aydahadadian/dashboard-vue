@@ -1,115 +1,109 @@
-<template
->
- <v-navigation-drawer
-        v-model="drawer"
-        dark
-        class="rounded-lg floating sticky"
+<template>
+  <v-navigation-drawer dark class="rounded-lg floating sticky">
+    <v-sheet class="pa-6" style="background: transparent">
+      <div>Material dashboard</div>
+    </v-sheet>
+
+    <v-divider></v-divider>
+
+    <v-list :lines="false" density="compact" nav class="sidebar-list">
+      <v-list-group
+        class="px-4 rounded-lg"
+        v-for="item in profileItems"
+        :key="item.title"
+        v-model="item.active"
+        :prepend-icon="item.action"
+        no-action
       >
-        <v-sheet class="pa-6" style="background: transparent">
-          <div>Material dashboard</div>
-        </v-sheet>
+        <template v-slot:activator>
+          <v-list-item-content>
+            <v-avatar size="36px">
+              <v-img
+                v-if="true"
+                alt="Avatar"
+                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+              ></v-img>
+            </v-avatar>
+            <v-list-item-title
+              v-text="item.title"
+              style="flex:none"
+            ></v-list-item-title>
+          </v-list-item-content>
+        </template>
 
-        <v-divider></v-divider>
+        <v-list-item v-for="child in item.items" :key="child.title">
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
 
-        <v-list :lines="false" density="compact" nav class="sidebar-list">
-          <v-list-group
-            class="px-4 rounded-lg"
-            v-for="item in profileItems"
-            :key="item.title"
-            v-model="item.active"
-            :prepend-icon="item.action"
-            no-action
-          >
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-avatar size="36px">
-                  <v-img
-                    v-if="true"
-                    alt="Avatar"
-                    src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                  ></v-img>
-                </v-avatar>
-                <v-list-item-title
-                  v-text="item.title"
-                  style="flex:none"
-                ></v-list-item-title>
-              </v-list-item-content>
-            </template>
+      <v-divider class="py-2"></v-divider>
 
-            <v-list-item v-for="child in item.items" :key="child.title">
-              <v-list-item-content>
-                <v-list-item-title v-text="child.title"></v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-group>
-
-          <v-divider class="py-2"></v-divider>
-
-          <v-list-group
-            class="px-4 rounded-lg"
-            v-for="item in dashboardItems"
-            :key="item.title"
-            v-model="item.active"
-            :prepend-icon="item.action"
-            no-action
-          >
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-list-item-title v-text="item.title"></v-list-item-title>
-              </v-list-item-content>
-            </template>
-
-            <v-list-item v-for="child in item.items" :key="child.title">
-              <v-list-item-content>
-                <v-list-item-title v-text="child.title"></v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-group>
-
-          <v-subheader :inset="inset">
-            Pages
-          </v-subheader>
-          <v-list-group
-            class="px-4 rounded-lg"
-            v-for="item in items"
-            :key="item.title"
-            v-model="item.active"
-            :prepend-icon="item.action"
-            no-action
-          >
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-list-item-title v-text="item.title"></v-list-item-title>
-              </v-list-item-content>
-            </template>
-
-            <v-list-item v-for="child in item.items" :key="child.title">
-              <v-list-item-content>
-                <v-list-item-title v-text="child.title"></v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-group>
-          <v-divider></v-divider>
-          <v-subheader :inset="inset">
-            Docs
-          </v-subheader>
-
-          <v-list-item
-            v-for="(item, i) in docs"
-            :key="i"
-            :value="item"
-            active-color="primary"
-          >
-            <template v-slot:prepend>
-              <v-icon :icon="item.action"></v-icon>
-            </template>
-
+      <v-list-group
+        class="px-4 rounded-lg"
+        v-for="item in dashboardItems"
+        :key="item.title"
+        v-model="item.active"
+        :prepend-icon="item.action"
+        no-action
+      >
+        <template v-slot:activator>
+          <v-list-item-content>
             <v-list-item-title v-text="item.title"></v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-</template>
+          </v-list-item-content>
+        </template>
 
+        <v-list-item v-for="child in item.items" :key="child.title">
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
+
+      <v-subheader>
+        Pages
+      </v-subheader>
+      <v-list-group
+        class="px-4 rounded-lg"
+        v-for="item in items"
+        :key="item.title"
+        v-model="item.active"
+        :prepend-icon="item.action"
+        no-action
+      >
+        <template v-slot:activator>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item v-for="child in item.items" :key="child.title">
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
+      <v-divider></v-divider>
+      <v-subheader>
+        Docs
+      </v-subheader>
+
+      <v-list-item
+        v-for="(item, i) in docs"
+        :key="i"
+        :value="item"
+        active-color="primary"
+      >
+        <template v-slot:prepend>
+          <v-icon :icon="item.action"></v-icon>
+        </template>
+
+        <v-list-item-title v-text="item.title"></v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+</template>
 
 <script lang="jsx">
 

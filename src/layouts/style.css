@@ -1,4 +1,3 @@
-
 #inspire > .v-application--wrap {
   flex-direction: row;
 }
@@ -17,41 +16,43 @@
   background: transparent;
   box-shadow: none;
 }
-.v-list-item__content {
+.sidebar-list .v-list-item__content {
   flex-wrap: nowrap;
   overflow: visible;
   min-width: 95px;
 }
-.v-list-item__content > .v-avatar {
+.sidebar-list .v-list-item__content > .v-avatar {
   flex: none;
   margin-right: 10px;
 }
-.v-list-item .v-list-item__title,
-.v-list-item .v-list-item__subtitle {
+.sidebar-list .v-list-item .v-list-item__title,
+.sidebar-list .v-list-item .v-list-item__subtitle {
   font-size: 0.9rem;
 }
 
-.v-list-item--link:before {
+.sidebar-list .v-list-item--link:before {
   content: none;
 }
-.v-list-item {
+.sidebar-list .v-list-item {
   margin: 10px 0;
 }
 .sidebar-list .v-list-item:hover {
   background-color: #4a4a4c !important;
   border-radius: 10px;
 }
-.v-list-item__icon {
+.sidebar-list .v-list-item__icon {
   margin: 12px 0;
   margin-right: 12px !important;
 }
-.v-icon.v-icon {
+.sidebar-list .v-icon.v-icon {
   font-size: 1.3rem;
 }
-.v-list-group .v-list-group__header .v-list-item__icon.v-list-group__header__append-icon{
+.sidebar-list
+  .v-list-group
+  .v-list-group__header
+  .v-list-item__icon.v-list-group__header__append-icon {
   margin: 0;
 }
-.v-main__wrap{
-
+.v-main__wrap {
   padding: 25px;
 }

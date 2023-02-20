@@ -1,13 +1,12 @@
 <template>
   <v-app id="inspire">
     <v-layout style="height: 100vh">
-     <Drawer />
+      <Drawer />
 
       <v-main style="padding-left: 280px;flex:1 0">
-        
         <Appbar />
-        <v-container class="py-8 px-6" fluid>
-         <Dashboard />
+        <v-container class="py-8" fluid>
+          <Dashboard />
         </v-container>
       </v-main>
     </v-layout>
@@ -22,7 +21,7 @@ import Drawer from './Drawer.vue'
 
 export default {
     data: () => ({
-        
+
     }),
     components: { Appbar, Drawer, Dashboard }
 }
