@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import { title } from "process";
 import IconCard from "../Commons/IconCard.vue";
 
 export default {
