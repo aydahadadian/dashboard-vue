@@ -42,6 +42,6 @@ import IconCard from "../Commons/IconCard.vue";
 
 export default {
   props: ["icon", "color", "title", "value", "report", "reportValue"],
-  components: { IconCard },
+  components: { IconCard }
 };
 </script>

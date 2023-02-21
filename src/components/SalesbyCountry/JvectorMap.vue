@@ -34,8 +34,8 @@ export default {
 
         regionStyle: {
           initial: {
-            fill: "#dde2e8",
-          },
+            fill: "#dde2e8"
+          }
         },
         markerStyle: {
           initial: {
@@ -43,16 +43,16 @@ export default {
             stroke: "#ff0057",
 
             "stroke-opacity": 0.7,
-            r: 5,
+            r: 5
           },
           selected: {
-            fill: "#000000",
-          },
+            fill: "#000000"
+          }
         },
         markerLabelStyle: {
           initial: {
-            fill: "#007bff",
-          },
+            fill: "#007bff"
+          }
         },
 
         scaleColors: ["#C8EEFF", "#0071A4"],
@@ -61,10 +61,10 @@ export default {
           { latLng: [51.1657, 10.4515], name: "Germany" },
           { latLng: [36.1304, -80.3468], name: "USA" },
           { latLng: [35.8617, 104.1954], name: "China" },
-          { latLng: [61.524, 105.3188], name: "Russia" },
-        ],
+          { latLng: [61.524, 105.3188], name: "Russia" }
+        ]
       });
-    },
-  },
+    }
+  }
 };
 </script>

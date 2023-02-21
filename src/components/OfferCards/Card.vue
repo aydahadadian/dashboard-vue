@@ -54,7 +54,7 @@
 </template>
 <script>
 export default {
-  props: ["title", "description", "location", "price", "img"],
+  props: ["title", "description", "location", "price", "img"]
 };
 </script>
 

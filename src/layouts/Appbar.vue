@@ -41,24 +41,24 @@ export default {
     iconList: [
       { icon: "mdi-account-circle" },
       { icon: "mdi-cog" },
-      { icon: "mdi-bell", badge: 15 },
+      { icon: "mdi-bell", badge: 15 }
     ],
     items: [
       {
         icon: "mdi-store",
         disabled: false,
-        href: "",
+        href: ""
       },
       {
         text: "Dashboard",
-        disabled: true,
+        disabled: true
       },
       {
         text: "Analytics",
-        disabled: true,
-      },
-    ],
-  }),
+        disabled: true
+      }
+    ]
+  })
 };
 </script>
 

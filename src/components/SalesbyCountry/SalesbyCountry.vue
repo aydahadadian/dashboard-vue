@@ -33,7 +33,7 @@ export default {
   components: {
     IconCard,
     CountryList,
-    JvectorMap,
-  },
+    JvectorMap
+  }
 };
 </script>

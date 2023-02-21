@@ -25,7 +25,7 @@ export default {
         title: "Bookings",
         value: "281",
         reportValue: "+55%",
-        report: "than last week",
+        report: "than last week"
       },
       {
         icon: "mdi-poll",
@@ -33,7 +33,7 @@ export default {
         title: "Todays Users",
         value: "2,300",
         reportValue: "+3%",
-        report: "than last month",
+        report: "than last month"
       },
       {
         icon: "mdi-account-plus-outline",
@@ -41,17 +41,17 @@ export default {
         title: "Revenue",
         value: "34k",
         reportValue: "+1%",
-        report: "than yesterday",
+        report: "than yesterday"
       },
       {
         icon: "mdi-store",
         color: "blue",
         title: "Followers",
         value: "+91",
-        report: "Just updated",
-      },
-    ],
+        report: "Just updated"
+      }
+    ]
   }),
-  components: { Card },
+  components: { Card }
 };
 </script>
