@@ -5,35 +5,41 @@
       v-for="item in items"
       :key="item.title"
     >
-      <Card 
-      :title="item.title"
+      <Card
+        :title="item.title"
         :text="item.text"
         :time="item.time"
-        :Color="item.color"
+        :bc="item.bc"
+        :chart="item.chart"
       />
     </v-col>
   </v-row>
 </template>
 <script>
 import Card from "./Card.vue";
+import LineChart from "./Charts/Line.vue";
+import BarChart from "./Charts/Bar.vue";
 export default {
   components: { Card },
   data: () => ({
     items: [
       {
-        color: "red",
+        chart: BarChart,
+        bc: "pink",
         title: "Website Views",
         text: "Last Campaign Performance",
         time: "ecampaign sent 2 days ago"
       },
       {
-        color: "red",
+        chart: LineChart,
+        bc: "green",
         title: "Daily Sales",
         text: "(+15%) increase in today sales.",
         time: "updated 4 min ago"
       },
       {
-        color: "red",
+        chart: LineChart,
+        bc: "black",
         title: "Completed Tasks",
         text: "Last Campaign Performance",
         time: "just updated"
